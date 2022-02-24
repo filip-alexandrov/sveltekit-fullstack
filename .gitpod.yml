@@ -16,3 +16,11 @@ ports:
 vscode:
   extensions:
     - svelte.svelte-vscode
+
+github:
+  prebuilds:
+    # auto run init script
+    master: true
+    # auto run init script on branches 
+    branches: true
+    pullRequests: true
