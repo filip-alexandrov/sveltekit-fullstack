@@ -5,7 +5,10 @@
 # ctrl + space = autocomplete/ suggestions 
 tasks:
   - init: npm install
-    command: npm run dev
+    # check if running locally/ gitpod
+    command: |
+      export HMR_HOST=`gp url 3000`
+      npm run dev
 
 ports:
   - port: 3000
