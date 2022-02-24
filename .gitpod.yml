@@ -1,0 +1,26 @@
+
+tasks:
+  - init: npm install
+    # check if running locally/ gitpod
+    command: |
+      export HMR_HOST=`gp url 3000`
+      npm run dev
+
+ports:
+  - port: 3000
+    onOpen: open-browser
+
+
+
+
+vscode:
+  extensions:
+    - svelte.svelte-vscode
+
+github:
+  prebuilds:
+    # auto run init script
+    master: true
+    # auto run init script on branches 
+    branches: true
+    pullRequests: true
